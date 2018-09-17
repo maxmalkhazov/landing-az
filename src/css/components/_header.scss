@@ -1,0 +1,79 @@
+.header {
+	
+	&::after {
+		content: '';
+		height: 100vh;
+		width: 100%;
+		background-image: url('https://images.pexels.com/photos/106400/pexels-photo-106400.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		display: block;
+		filter: blur(10px) grayscale(100%);
+		transition: all 1s;
+		
+		@include mobile {
+			height: 50vh;
+		}
+	}
+	
+	&:hover::after {
+		filter: blur(0px);
+	}
+	
+	&:hover .content {
+		filter: blur(2px);
+	}
+}
+
+.content {
+	position: absolute;
+	z-index: 100;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	transition: all 1s;
+	
+	@include mobile {
+		top: 20%;
+		transform: translate(-50%, -20%);
+	}
+	
+	&__logo {
+		
+	}
+	
+	&__title {
+		font-size: 1.5rem;
+		
+		@include mobile {
+			font-size: 1.1rem;
+		}
+		
+		h1 {
+			font-weight: 300;
+		}
+		
+		@include landscape {
+			display: none;
+		}
+	}
+	
+	&__text {
+		font-size: 1.1rem;
+		
+		@include mobile {
+				display: none;
+		}
+		
+		@include landscape {
+			display: none;
+		}
+		
+		p {
+			line-height: 1.6;
+			
+		}
+	}
+}

@@ -1,0 +1,25 @@
+.services {
+	font-weight: 300;
+	
+	&__box {
+		
+		box-shadow: 0px 0px 20px 3px rgba(184,184,184,0.9);
+		padding: 1.3rem 1.1rem;
+		transition: all .7s;
+		
+		&:hover {
+			box-shadow: none;
+			cursor: pointer;
+		}
+		
+		@include mobile {
+			box-shadow: 0px 0px 20px 3px rgba(184,184,184,0.9);
+			padding: 1.2rem 1rem;
+		}
+	}
+	
+	h3 {
+		font-size: 1.3rem;
+		font-weight: 300;
+	}
+}
